@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitaNova Health - Scandinavian Minimalist Dashboard & Digital Wellness Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand-section">
+        <div class="brand-logo">
+          <svg class="icon-svg" viewBox="0 0 24 24">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="brand-name">VitaNova</span>
+      </div>
+      
+      <nav style="flex-grow: 1;">
+        <ul class="sidebar-menu">
+          <li>
+            <button class="menu-item active" onclick="switchTab('prototype-tab', this)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              Interactive Prototype
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" onclick="switchTab('design-system-tab', this)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+              Design System
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" onclick="switchTab('case-study-tab', this)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              Case Study
+            </button>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="profile-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Sarah Jenkins" class="profile-avatar">
+          <div class="profile-info">
+            <div class="profile-name">Sarah Jenkins</div>
+            <div class="profile-role">Hypertension Patient</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="main-content">
+      
+      <!-- TAB 1: INTERACTIVE PROTOTYPE SANDBOX -->
+      <div id="prototype-tab" class="tab-panel active">
+        <div class="prototype-sandbox">
+          
+          <!-- Mockup Device Frame -->
+          <div class="mobile-frame-container">
+            <div class="phone-mockup">
+              <!-- Dynamic Island -->
+              <div class="phone-dynamic-island" id="island-container"></div>
+              
+              <!-- Status Bar -->
+              <div class="phone-status-bar" id="status-bar">
+                <span id="status-time">09:41</span>
+                <div class="status-bar-right">
+                  <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor">
+                    <rect x="0" y="8" width="2.5" height="3" rx="0.5"/>
+                    <rect x="4" y="6" width="2.5" height="5" rx="0.5"/>
+                    <rect x="8" y="4" width="2.5" height="7" rx="0.5"/>
+                    <rect x="12" y="1" width="2.5" height="10" rx="0.5"/>
+                  </svg>
+                  <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor">
+                    <path d="M7.5 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-3.75-4.2a5.3 5.3 0 0 1 7.5 0l-.88.88a4 4 0 0 0-5.74 0l-.88-.88zm-1.76-1.77a7.8 7.8 0 0 1 11.02 0l-.88.88a6.5 6.5 0 0 0-9.26 0l-.88-.88z"/>
+                  </svg>
+                  <svg width="22" height="11" viewBox="0 0 22 11" fill="currentColor">
+                    <rect x="0" y="0" width="18" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+                    <rect x="2" y="2" width="12" height="7" rx="1.5"/>
+                    <path d="M20 3.5v4" stroke="currentColor" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Viewport Content -->
+              <div class="phone-viewport">
+                
+                <!-- Home Indicator -->
+                <div class="phone-home-indicator"></div>
+                
+                <!-- Mobile Screens Stack -->
+                <div class="mobile-screens-wrapper">
+                  
+                  <!-- Screen 1: Splash -->
+                  <div id="screen-splash" class="mobile-screen active">
+                    <div class="splash-logo-container" style="margin-top: 150px;">
+                      <div class="splash-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                      </div>
+                    </div>
+                    <h1 class="splash-app-name">VitaNova</h1>
+                    <p class="splash-tagline">Harmonious Vitality, Effortlessly Tracked</p>
+                    
+                    <div style="margin-top: auto; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center; gap: 24px; width: 100%;">
+                      <div class="spinner"></div>
+                      <button class="mobile-btn mobile-btn-outline" onclick="navigateTo('screen-onboarding-1')" style="max-width: 200px;">Begin Experience</button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 2: Onboarding 1 (Abstract Scandinavian Vectors) -->
+                  <div id="screen-onboarding-1" class="mobile-screen">
+                    <div class="onboarding-content">
+                      <div class="onboarding-illustration">
+                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <!-- Overlapping organic blob shapes -->
+                          <path d="M50,90 C50,45 95,30 135,50 C175,70 190,115 170,155 C150,195 105,190 75,170 C45,150 50,135 50,90 Z" fill="#F0F3EF" opacity="0.95"/>
+                          <path d="M90,120 C90,85 125,75 155,90 C185,105 195,140 180,170 C165,200 130,195 105,180 C80,165 90,155 90,120 Z" fill="#EFEBE4" opacity="0.65"/>
+                          <path d="M60 110h28.5l9.5-28.5L113 152l14.25-70.5L141 110h19" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <h2 class="onboarding-title">Natural Vitality Monitoring</h2>
+                      <p class="onboarding-desc">Track your blood pressure, oxygenation, and physiological changes through a calm, non-intrusive minimal interface.</p>
+                      
+                      <div class="onboarding-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                      </div>
+                      
+                      <div class="onboarding-buttons">
+                        <button class="mobile-btn mobile-btn-outline" onclick="navigateTo('screen-login')" style="flex: 1;">Skip</button>
+                        <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-onboarding-2')" style="flex: 2;">Continue</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 3: Onboarding 2 -->
+                  <div id="screen-onboarding-2" class="mobile-screen">
+                    <div class="onboarding-content">
+                      <div class="onboarding-illustration">
+                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M40,110 C40,60 90,40 140,60 C190,80 180,130 160,165 C140,200 80,190 60,170 C40,150 40,135 40,110 Z" fill="#FAF8F5" opacity="0.95"/>
+                          <path d="M80,130 C80,90 120,80 150,95 C180,110 170,150 150,180 C130,210 90,200 85,180 C80,160 80,150 80,130 Z" fill="#FDF4F2" opacity="0.75"/>
+                          <path d="M75 145v-45a35 35 0 0 1 70 0v45H75z" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                          <circle cx="110" cy="110" r="16" fill="var(--primary)"/>
+                          <path d="M105 110h10M110 105v10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </div>
+                      <h2 class="onboarding-title">Empathetic Consultations</h2>
+                      <p class="onboarding-desc">Connect with your specialized healthcare team and trusted doctors via clear HD video sessions and micro-messaging.</p>
+                      
+                      <div class="onboarding-dots">
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                      </div>
+                      
+                      <div class="onboarding-buttons">
+                        <button class="mobile-btn mobile-btn-outline" onclick="navigateTo('screen-login')" style="flex: 1;">Skip</button>
+                        <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-onboarding-3')" style="flex: 2;">Continue</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 4: Onboarding 3 -->
+                  <div id="screen-onboarding-3" class="mobile-screen">
+                    <div class="onboarding-content">
+                      <div class="onboarding-illustration">
+                        <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M60,80 C60,40 100,30 140,50 C180,70 190,110 170,150 C150,190 110,180 80,160 C50,140 60,120 60,80 Z" fill="#FDF4F2" opacity="0.95"/>
+                          <path d="M90,110 C90,80 120,70 145,85 C170,100 175,130 160,155 C145,180 115,175 95,160 C75,145 90,135 90,110 Z" fill="#EFEBE4" opacity="0.65"/>
+                          <path d="M110 60v60M110 145v5" stroke="var(--danger)" stroke-width="6" stroke-linecap="round"/>
+                          <path d="M75 75l70 70M145 75l-70 70" stroke="var(--danger)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 6"/>
+                        </svg>
+                      </div>
+                      <h2 class="onboarding-title">Reliable Crisis SOS</h2>
+                      <p class="onboarding-desc">Access high-priority emergency support. Share secure medical files and live coordinates with designated family members.</p>
+                      
+                      <div class="onboarding-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                      </div>
+                      
+                      <div class="onboarding-buttons">
+                        <button class="mobile-btn mobile-btn-outline" onclick="navigateTo('screen-login')" style="flex: 1;">Skip</button>
+                        <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-login')" style="flex: 2;">Get Started</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 5: Login -->
+                  <div id="screen-login" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-onboarding-3')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Access Profile</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div style="padding: 24px; display: flex; flex-direction: column; align-items: center; flex-grow: 1;">
+                      <div class="splash-logo" style="width: 60px; height: 60px; margin-bottom: 24px; border-radius: 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                      </div>
+                      
+                      <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--dark); margin-bottom: 4px; letter-spacing: -0.5px;">Welcome Back</h3>
+                      <p style="font-size: 13px; color: var(--grey-600); margin-bottom: 32px;">Please sign in to access your dashboard</p>
+                      
+                      <div class="mobile-input-group">
+                        <label class="mobile-input-label">Email Address</label>
+                        <div class="mobile-input-wrapper">
+                          <span class="mobile-input-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                          </span>
+                          <input type="email" class="mobile-input" placeholder="sarah.j@example.com" value="sarah.j@example.com">
+                        </div>
+                      </div>
+                      
+                      <div class="mobile-input-group" style="margin-bottom: 12px;">
+                        <label class="mobile-input-label">Password</label>
+                        <div class="mobile-input-wrapper">
+                          <span class="mobile-input-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                          </span>
+                          <input type="password" class="mobile-input" placeholder="••••••••" value="password123">
+                        </div>
+                      </div>
+                      
+                      <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+                        <label style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--grey-600); cursor: pointer;">
+                          <input type="checkbox" checked style="accent-color: var(--primary);"> Remember me
+                        </label>
+                        <a href="#" style="font-size: 12px; color: var(--primary); font-weight: 600; text-decoration: none;">Reset Code?</a>
+                      </div>
+                      
+                      <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-home')" style="margin-bottom: 16px;">Sign In</button>
+                      
+                      <div style="display: flex; align-items: center; width: 100%; margin-bottom: 16px;">
+                        <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--grey-200);">
+                        <span style="font-size: 10px; color: var(--grey-500); padding: 0 10px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Or authenticate via</span>
+                        <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--grey-200);">
+                      </div>
+                      
+                      <div style="display: flex; gap: 12px; width: 100%; margin-bottom: 24px;">
+                        <button class="mobile-btn mobile-btn-outline" style="flex: 1; padding: 10px;" onclick="navigateTo('screen-home')">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.24 10.285V13.4h6.887c-.648 2.41-2.519 4.1-5.178 4.1a5.955 5.955 0 0 1-5.933-5.95 5.955 5.955 0 0 1 5.933-5.95c1.472 0 2.805.518 3.847 1.517l2.42-2.42C18.435 3.01 15.545 2 12.24 2c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.783 0 9.61-4.062 9.61-9.78 0-.66-.08-1.29-.21-1.935H12.24z"/></svg>
+                          Google
+                        </button>
+                        <button class="mobile-btn mobile-btn-outline" style="flex: 1; padding: 10px;" onclick="navigateTo('screen-home')">
+                          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM11 20a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM13 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM15 20a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM21 15a6 6 0 0 1-12 0v-5a6 6 0 0 1 12 0v5z"/></svg>
+                          Face ID
+                        </button>
+                      </div>
+                      
+                      <div style="font-size: 13px; color: var(--grey-600); margin-top: auto;">
+                        New to VitaNova? <a href="#" onclick="navigateTo('screen-signup')" style="color: var(--primary); font-weight: 600; text-decoration: none;">Join Us</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 6: Sign Up -->
+                  <div id="screen-signup" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-login')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Create Profile</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div style="padding: 20px 24px; display: flex; flex-direction: column; flex-grow: 1; overflow-y: auto;">
+                      <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--dark); margin-bottom: 4px; letter-spacing: -0.5px;">Register Now</h3>
+                      <p style="font-size: 13px; color: var(--grey-600); margin-bottom: 24px;">Setup your health profile securely in seconds</p>
+                      
+                      <div class="mobile-input-group">
+                        <label class="mobile-input-label">Full Name</label>
+                        <div class="mobile-input-wrapper">
+                          <span class="mobile-input-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                          </span>
+                          <input type="text" class="mobile-input" placeholder="Sarah Jenkins">
+                        </div>
+                      </div>
+                      
+                      <div class="mobile-input-group">
+                        <label class="mobile-input-label">Mobile Number</label>
+                        <div class="mobile-input-wrapper">
+                          <span class="mobile-input-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                          </span>
+                          <input type="tel" class="mobile-input" placeholder="+1 (555) 019-2834">
+                        </div>
+                      </div>
+                      
+                      <div class="mobile-input-group">
+                        <label class="mobile-input-label">Email Address</label>
+                        <div class="mobile-input-wrapper">
+                          <span class="mobile-input-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                          </span>
+                          <input type="email" class="mobile-input" placeholder="sarah.j@example.com">
+                        </div>
+                      </div>
+                      
+                      <div class="mobile-input-group">
+                        <label class="mobile-input-label">Create Password</label>
+                        <div class="mobile-input-wrapper">
+                          <span class="mobile-input-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                          </span>
+                          <input type="password" class="mobile-input" placeholder="Min. 8 characters">
+                        </div>
+                      </div>
+                      
+                      <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-home')">Create Account</button>
+                      
+                      <div style="font-size: 13px; color: var(--grey-600); text-align: center; margin-top: auto;">
+                        Already registered? <a href="#" onclick="navigateTo('screen-login')" style="color: var(--primary); font-weight: 600; text-decoration: none;">Sign In</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 7: Home Dashboard (Asymmetric Redesign with Terracotta Highlight only) -->
+                  <div id="screen-home" class="mobile-screen">
+                    <div class="dashboard-header">
+                      <div class="dashboard-user">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="Sarah" class="user-avatar-main" onclick="navigateTo('screen-profile')">
+                        <div>
+                          <div class="user-greeting">Good Morning</div>
+                          <div class="user-name">Sarah Jenkins</div>
+                        </div>
+                      </div>
+                      
+                      <button class="header-sos-btn" onclick="navigateTo('screen-sos')">
+                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        SOS
+                      </button>
+                    </div>
+
+                    <!-- Asymmetrical Vitals Grid -->
+                    <div class="dashboard-vitals-grid">
+                      
+                      <!-- Blood Pressure: Spans full width (Asymmetry 1, Terracotta Sparkline Highlight) -->
+                      <div class="mobile-card vital-bp-card" onclick="openVitalDetailsDirect('bp')">
+                        <div class="vital-card-info">
+                          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                            <div class="vital-icon-container" style="background-color: var(--primary-light); color: var(--primary); width:28px; height:28px;">
+                              <svg class="icon-svg" style="width:16px; height:16px;" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+                            </div>
+                            <span class="vital-title">BLOOD PRESSURE</span>
+                          </div>
+                          <div class="vital-value">118/78<span class="vital-unit">mmHg</span></div>
+                          <span class="vital-trend text-success" style="font-size:10px; margin-top:2px;">
+                            <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                            Optimal
+                          </span>
+                        </div>
+                        <!-- Sparkline uses Terracotta as a premium highlight -->
+                        <div class="vital-mini-sparkline">
+                          <svg width="80" height="36" viewBox="0 0 80 36">
+                            <path d="M0,24 C15,20 30,30 45,15 C60,5 70,22 80,14" fill="none" stroke="var(--brand-terracotta)" stroke-width="2" stroke-linecap="round"/>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <!-- Heart Rate: Split grid left -->
+                      <div class="mobile-card vital-card" onclick="openVitalDetailsDirect('hr')">
+                        <div class="vital-card-header">
+                          <div class="vital-icon-container" style="background-color: var(--danger-light); color: var(--danger);">
+                            <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                          </div>
+                          <span class="vital-trend text-danger">
+                            <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                            2%
+                          </span>
+                        </div>
+                        <div>
+                          <div class="vital-title">HEART RATE</div>
+                          <div class="vital-value">72<span class="vital-unit">BPM</span></div>
+                        </div>
+                      </div>
+
+                      <!-- Oxygen: Split grid right -->
+                      <div class="mobile-card vital-card" onclick="openVitalDetailsDirect('oxygen')">
+                        <div class="vital-card-header">
+                          <div class="vital-icon-container" style="background-color: var(--accent-light); color: var(--primary);">
+                            <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                          </div>
+                          <span class="vital-trend text-success">98%</span>
+                        </div>
+                        <div>
+                          <div class="vital-title">BLOOD OXYGEN</div>
+                          <div class="vital-value">98<span class="vital-unit">%</span></div>
+                        </div>
+                      </div>
+
+                      <!-- Temperature: Spans full width underneath -->
+                      <div class="mobile-card vital-card" style="grid-column: span 2; display: flex; flex-direction: row; justify-content: space-between; align-items: center; min-height: 70px;" onclick="openVitalDetailsDirect('temp')">
+                        <div style="display:flex; align-items:center; gap:12px;">
+                          <div class="vital-icon-container" style="background-color: var(--success-light); color: var(--success);">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                          </div>
+                          <div>
+                            <div class="vital-title">BODY TEMPERATURE</div>
+                            <div class="vital-value" style="font-size:16px;">36.8<span class="vital-unit">°C</span></div>
+                          </div>
+                        </div>
+                        <span class="mobile-badge badge-success">Optimal</span>
+                      </div>
+                    </div>
+
+                    <!-- Medication Compliance Tracking Bar Widget -->
+                    <div class="home-section-container">
+                      <div class="home-section-title">
+                        <span>Medications Schedule</span>
+                        <span style="font-size: 11px; font-weight:600; color: var(--success);" id="home-adherence-percentage">50% Adherence</span>
+                      </div>
+                      <div class="mobile-card" style="padding: 12px; margin-bottom: 12px;">
+                        <div style="width: 100%; height: 6px; background-color: var(--grey-100); border-radius: var(--radius-full); overflow: hidden;">
+                          <div id="compliance-fill-bar" style="width: 50%; height: 100%; background: linear-gradient(90deg, var(--primary) 0%, var(--success) 100%); transition: width 0.3s ease;"></div>
+                        </div>
+                      </div>
+                      
+                      <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div class="mobile-card medication-card">
+                          <div class="med-info-left">
+                            <div class="med-icon-box" style="background-color: var(--primary-light); color: var(--primary);">
+                              <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M6 21V3M10 21V3M14 21V3M18 21V3"/></svg>
+                            </div>
+                            <div>
+                              <div class="med-name">Lisinopril 10mg</div>
+                              <div class="med-details">Once Daily • Today, 09:00 AM</div>
+                            </div>
+                          </div>
+                          <button class="med-action-btn taken" id="med-btn-1" onclick="toggleMedTaken('med-btn-1')">Taken ✓</button>
+                        </div>
+                        
+                        <div class="mobile-card medication-card">
+                          <div class="med-info-left">
+                            <div class="med-icon-box" style="background-color: var(--warning-light); color: var(--warning-dark);">
+                              <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M6 21V3M10 21V3M14 21V3M18 21V3"/></svg>
+                            </div>
+                            <div>
+                              <div class="med-name">Atorvastatin 20mg</div>
+                              <div class="med-details">Once Daily • Today, 09:00 PM</div>
+                            </div>
+                          </div>
+                          <button class="med-action-btn" id="med-btn-2" onclick="toggleMedTaken('med-btn-2')">Mark Taken</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Upcoming Appointments -->
+                    <div class="home-section-container">
+                      <div class="home-section-title">
+                        <span>Upcoming Consultations</span>
+                        <a href="#" class="home-section-seeall" onclick="navigateTo('screen-doctors')">Schedule Slot</a>
+                      </div>
+                      
+                      <div class="mobile-card appointment-card" onclick="navigateTo('screen-video-call')">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=150" alt="Dr. Marcus" class="doctor-avatar-circle">
+                        <div class="appointment-details">
+                          <div class="appt-doctor-name">Dr. Marcus Vance</div>
+                          <div class="appt-specialty">Senior Cardiologist • Heart Center</div>
+                          <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="appt-time-badge">
+                              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                              Today, 10:30 AM
+                            </span>
+                            <span class="mobile-badge badge-primary">Video Call</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Recent Medical Reports -->
+                    <div class="home-section-container" style="margin-bottom: 80px;">
+                      <div class="home-section-title">
+                        <span>Medical Reports Locker</span>
+                        <a href="#" class="home-section-seeall" onclick="navigateTo('screen-reports')">View Locker</a>
+                      </div>
+                      
+                      <div class="mobile-card" style="display: flex; align-items: center; gap: 12px;" onclick="navigateTo('screen-reports')">
+                        <div style="width: 40px; height: 40px; border-radius: var(--radius-md); background-color: var(--success-light); display: flex; align-items: center; justify-content: center; color: var(--success);">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                          <div style="font-weight: 600; font-size: 13px;">Comprehensive Blood Panel</div>
+                          <div style="font-size: 11px; color: var(--grey-600); margin-top: 2px;">LabCorp Diagnostic • July 25, 2026</div>
+                        </div>
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item active" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 8: Health Details (Charts) -->
+                  <div id="screen-health-details" class="mobile-screen">
+                    <div class="mobile-screen-header" style="padding-bottom: 6px;">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title" id="health-details-title-heading">Health Vitals</span>
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                      </button>
+                    </div>
+
+                    <!-- 6 Vitals Tabs Selector -->
+                    <div style="display: flex; gap: 6px; padding: 0 20px 12px 20px; overflow-x: auto; white-space: nowrap; border-bottom: 1px solid var(--grey-200);">
+                      <button class="mobile-badge badge-primary vital-select-btn" id="vital-btn-bp" onclick="selectVitalType('bp')">Blood Pressure</button>
+                      <button class="mobile-badge vital-select-btn" style="background-color: var(--grey-100); color: var(--grey-600);" id="vital-btn-hr" onclick="selectVitalType('hr')">Heart Rate</button>
+                      <button class="mobile-badge vital-select-btn" style="background-color: var(--grey-100); color: var(--grey-600);" id="vital-btn-oxygen" onclick="selectVitalType('oxygen')">Oxygen</button>
+                      <button class="mobile-badge vital-select-btn" style="background-color: var(--grey-100); color: var(--grey-600);" id="vital-btn-temp" onclick="selectVitalType('temp')">Temperature</button>
+                      <button class="mobile-badge vital-select-btn" style="background-color: var(--grey-100); color: var(--grey-600);" id="vital-btn-weight" onclick="selectVitalType('weight')">Weight</button>
+                      <button class="mobile-badge vital-select-btn" style="background-color: var(--grey-100); color: var(--grey-600);" id="vital-btn-bmi" onclick="selectVitalType('bmi')">BMI</button>
+                    </div>
+                    
+                    <div style="padding: 16px 20px 80px 20px; overflow-y: auto;">
+                      
+                      <!-- Chart Card -->
+                      <div class="mobile-card chart-container-card">
+                        <div class="chart-header">
+                          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 15px;" id="chart-sub-heading">Blood Pressure Trend</span>
+                          <div class="chart-tab-list">
+                            <button class="chart-tab-btn active" onclick="updateChartTimeframe('weekly')">W</button>
+                            <button class="chart-tab-btn" onclick="updateChartTimeframe('monthly')">M</button>
+                            <button class="chart-tab-btn" onclick="updateChartTimeframe('yearly')">Y</button>
+                          </div>
+                        </div>
+                        
+                        <!-- Custom SVG Chart Canvas -->
+                        <div class="chart-canvas-wrapper" id="svg-chart-container"></div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-top: 12px; font-size: 11px; color: var(--grey-500); font-weight: 500;">
+                          <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                        </div>
+                      </div>
+
+                      <!-- Stats Cards List -->
+                      <div class="home-section-title"><span>Vital Metrics Summary</span></div>
+                      
+                      <div style="display: flex; flex-direction: column; gap: 12px;">
+                        
+                        <div class="mobile-card" style="display: flex; justify-content: space-between; align-items: center; padding: 14px;">
+                          <div>
+                            <div style="font-size: 11px; font-weight: 600; color: var(--grey-500); text-transform: uppercase;" id="metric-label-1">Average Heart Rate</div>
+                            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--dark); margin-top: 4px;" id="metric-val-1">74 BPM</div>
+                          </div>
+                          <span class="mobile-badge badge-success" id="metric-badge-1">Optimal</span>
+                        </div>
+
+                        <div class="mobile-card" style="display: flex; justify-content: space-between; align-items: center; padding: 14px;">
+                          <div>
+                            <div style="font-size: 11px; font-weight: 600; color: var(--grey-500); text-transform: uppercase;" id="metric-label-2">Systolic/Diastolic Avg</div>
+                            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--dark); margin-top: 4px;" id="metric-val-2">119/77 mmHg</div>
+                          </div>
+                          <span class="mobile-badge badge-success" id="metric-badge-2">Optimal</span>
+                        </div>
+
+                        <div class="mobile-card" style="display: flex; justify-content: space-between; align-items: center; padding: 14px;">
+                          <div>
+                            <div style="font-size: 11px; font-weight: 600; color: var(--grey-500); text-transform: uppercase;" id="metric-label-3">Current Weight & BMI</div>
+                            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--dark); margin-top: 4px;" id="metric-val-3">68.5 kg <span style="font-size: 12px; color: var(--grey-500); font-weight: 500;">(BMI 23.4)</span></div>
+                          </div>
+                          <span class="mobile-badge badge-primary" id="metric-badge-3">Healthy</span>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 9: Medical Reports -->
+                  <div id="screen-reports" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Reports Locker</span>
+                      <button class="mobile-header-btn" onclick="addNewReportMock()">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      </button>
+                    </div>
+                    
+                    <div class="search-container">
+                      <div class="mobile-input-wrapper">
+                        <span class="mobile-input-icon">
+                          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </span>
+                        <input type="text" class="mobile-input" style="padding-top: 10px; padding-bottom: 10px;" placeholder="Search files...">
+                      </div>
+                    </div>
+                    
+                    <div style="padding: 0 20px 80px 20px; display: flex; flex-direction: column; gap: var(--space-sm); overflow-y: auto;" id="reports-list-container">
+                      
+                      <div class="mobile-card" style="padding: 16px;">
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                          <div style="width: 40px; height: 40px; border-radius: var(--radius-md); background-color: var(--danger-light); display: flex; align-items: center; justify-content: center; color: var(--danger); font-weight: 700; font-size:12px;">PDF</div>
+                          <div style="flex-grow: 1;">
+                            <div style="font-weight: 600; font-size: 14px;">Complete Blood Count (CBC)</div>
+                            <div style="font-size: 11px; color: var(--grey-600); margin-top: 2px;">Quest Diagnostics • July 20, 2026</div>
+                          </div>
+                        </div>
+                        <div style="display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--grey-200);">
+                          <button class="mobile-btn mobile-btn-outline" style="flex: 1; padding: 8px; font-size: 12px;" onclick="simulatePdfAction('download', 'CBC_Report.pdf')">Download</button>
+                          <button class="mobile-btn mobile-btn-secondary" style="flex: 1; padding: 8px; font-size: 12px;" onclick="simulatePdfAction('share', 'CBC_Report.pdf')">Share</button>
+                        </div>
+                      </div>
+
+                      <div class="mobile-card" style="padding: 16px;">
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                          <div style="width: 40px; height: 40px; border-radius: var(--radius-md); background-color: var(--primary-light); display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 700; font-size:12px;">PDF</div>
+                          <div style="flex-grow: 1;">
+                            <div style="font-weight: 600; font-size: 14px;">Electrocardiogram (ECG)</div>
+                            <div style="font-size: 11px; color: var(--grey-600); margin-top: 2px;">City Heart Clinic • June 12, 2026</div>
+                          </div>
+                        </div>
+                        <div style="display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--grey-200);">
+                          <button class="mobile-btn mobile-btn-outline" style="flex: 1; padding: 8px; font-size: 12px;" onclick="simulatePdfAction('download', 'ECG_Report.pdf')">Download</button>
+                          <button class="mobile-btn mobile-btn-secondary" style="flex: 1; padding: 8px; font-size: 12px;" onclick="simulatePdfAction('share', 'ECG_Report.pdf')">Share</button>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item active" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 10: Doctor Consultation -->
+                  <div id="screen-doctors" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Consultations</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div class="search-container" style="padding-bottom: 6px;">
+                      <div class="mobile-input-wrapper">
+                        <span class="mobile-input-icon">
+                          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </span>
+                        <input type="text" class="mobile-input" style="padding-top: 10px; padding-bottom: 10px;" placeholder="Search specialists...">
+                      </div>
+                    </div>
+
+                    <div style="display: flex; gap: 8px; padding: 0 20px 12px 20px; overflow-x: auto; white-space: nowrap;">
+                      <span class="mobile-badge badge-primary" style="padding: 6px 12px;">All Specialty</span>
+                      <span class="mobile-badge" style="background-color: var(--grey-100); color: var(--grey-500); padding: 6px 12px;">Cardiology</span>
+                      <span class="mobile-badge" style="background-color: var(--grey-100); color: var(--grey-500); padding: 6px 12px;">General GP</span>
+                    </div>
+                    
+                    <div class="doctor-grid" style="padding-bottom: 80px;">
+                      
+                      <!-- Dr. Marcus Vance -->
+                      <div class="mobile-card doctor-list-card">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=150" alt="Dr. Marcus" style="width: 60px; height: 60px; border-radius: var(--radius-md); object-fit: cover;">
+                        <div class="doc-list-details">
+                          <span class="mobile-badge badge-success" style="float: right; font-size: 9px; padding: 2px 6px;">Online</span>
+                          <div class="doc-list-name">Dr. Marcus Vance</div>
+                          <div class="doc-list-specialty">Cardiologist • 12 Yrs Exp</div>
+                          <div class="doc-meta">
+                            <span class="doc-rating">★ 4.9</span>
+                            <span class="doc-experience">$120 / Session</span>
+                          </div>
+                          <div class="doctor-card-footer">
+                            <button class="mobile-btn mobile-btn-outline" style="padding: 8px 12px; font-size: 12px; flex: 1;" onclick="navigateTo('screen-video-call')">Quick Call</button>
+                            <button class="mobile-btn mobile-btn-primary" style="padding: 8px 12px; font-size: 12px; flex: 1.2;" onclick="selectDoctor('Dr. Marcus Vance', 'Cardiologist')">Book Slot</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Dr. Elena Rostova -->
+                      <div class="mobile-card doctor-list-card">
+                        <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=150" alt="Dr. Elena" style="width: 60px; height: 60px; border-radius: var(--radius-md); object-fit: cover;">
+                        <div class="doc-list-details">
+                          <span class="mobile-badge" style="background-color: var(--warning-light); color: var(--warning); float: right; font-size: 9px; padding: 2px 6px;">Busy</span>
+                          <div class="doc-list-name">Dr. Elena Rostova</div>
+                          <div class="doc-list-specialty">Internal Medicine • 8 Yrs Exp</div>
+                          <div class="doc-meta">
+                            <span class="doc-rating">★ 4.8</span>
+                            <span class="doc-experience">$90 / Session</span>
+                          </div>
+                          <div class="doctor-card-footer">
+                            <button class="mobile-btn mobile-btn-outline" style="padding: 8px 12px; font-size: 12px; flex: 1;" onclick="alert('Practitioner is currently on duty. Booking a slot is recommended.')">Chat</button>
+                            <button class="mobile-btn mobile-btn-primary" style="padding: 8px 12px; font-size: 12px; flex: 1.2;" onclick="selectDoctor('Dr. Elena Rostova', 'Internal Medicine')">Book Slot</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item active" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 11: Appointment Booking -->
+                  <div id="screen-booking" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-doctors')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Schedule Slot</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div style="padding: 16px 20px; overflow-y: auto; flex-grow: 1;">
+                      <div class="mobile-card" style="display: flex; gap: 12px; margin-bottom: 20px; background-color: var(--primary-light); border-color: var(--primary);">
+                        <div id="booking-doc-avatar" style="width: 48px; height: 48px; border-radius: var(--radius-md); background-color: var(--grey-300); background-size: cover; background-position: center;"></div>
+                        <div>
+                          <div id="booking-doc-name" style="font-weight: 700; font-size: 14px; color: var(--dark);">Dr. Marcus Vance</div>
+                          <div id="booking-doc-specialty" style="font-size: 12px; color: var(--grey-500); margin-top: 2px;">Cardiologist</div>
+                        </div>
+                      </div>
+
+                      <div class="home-section-title"><span>Select Date</span></div>
+                      
+                      <!-- Calendar widget -->
+                      <div class="mobile-card" style="padding: 12px; margin-bottom: 20px;">
+                        <div class="calendar-month-header">
+                          <span class="calendar-month-name">July 2026</span>
+                          <div style="display: flex; gap: 8px;">
+                            <button style="border: none; background: none; cursor: pointer;">◀</button>
+                            <button style="border: none; background: none; cursor: pointer;">▶</button>
+                          </div>
+                        </div>
+                        <div class="calendar-days-grid">
+                          <span class="calendar-day-header">Su</span>
+                          <span class="calendar-day-header">Mo</span>
+                          <span class="calendar-day-header">Tu</span>
+                          <span class="calendar-day-header">We</span>
+                          <span class="calendar-day-header">Th</span>
+                          <span class="calendar-day-header">Fr</span>
+                          <span class="calendar-day-header">Sa</span>
+                          
+                          <button class="calendar-day-btn disabled">26</button>
+                          <button class="calendar-day-btn disabled">27</button>
+                          <button class="calendar-day-btn disabled">28</button>
+                          <button class="calendar-day-btn active">29</button>
+                          <button class="calendar-day-btn">30</button>
+                          <button class="calendar-day-btn">31</button>
+                          <button class="calendar-day-btn">1</button>
+                        </div>
+                      </div>
+
+                      <div class="home-section-title"><span>Available slots</span></div>
+                      
+                      <div class="time-slots-grid" style="padding: 0; margin-bottom: 24px;">
+                        <button class="time-slot-btn active" onclick="selectTimeSlot(this)">09:00 AM</button>
+                        <button class="time-slot-btn" onclick="selectTimeSlot(this)">10:30 AM</button>
+                        <button class="time-slot-btn" onclick="selectTimeSlot(this)">11:15 AM</button>
+                        <button class="time-slot-btn" onclick="selectTimeSlot(this)">02:00 PM</button>
+                        <button class="time-slot-btn" onclick="selectTimeSlot(this)">03:30 PM</button>
+                        <button class="time-slot-btn" onclick="selectTimeSlot(this)">04:15 PM</button>
+                      </div>
+
+                      <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-payment')">Proceed to Checkout</button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 12: Video Consultation -->
+                  <div id="screen-video-call" class="mobile-screen">
+                    <div class="video-consult-screen">
+                      <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600" alt="Doctor Video" class="doctor-fullscreen-video">
+                      
+                      <div class="user-floating-video">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="User Video">
+                      </div>
+
+                      <div class="video-overlay-info">
+                        <h4 class="video-doctor-name">Dr. Marcus Vance</h4>
+                        <span class="video-call-duration" id="call-timer">00:00</span>
+                      </div>
+
+                      <div class="video-call-controls">
+                        <button class="call-control-btn" id="call-mic-btn" onclick="toggleCallControl('call-mic-btn')">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        </button>
+                        <button class="call-control-btn" id="call-cam-btn" onclick="toggleCallControl('call-cam-btn')">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                        </button>
+                        <button class="call-control-btn" id="call-vol-btn" onclick="toggleCallControl('call-vol-btn')">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                        </button>
+                        <button class="call-control-btn end-call" onclick="endConsultationCall()">
+                          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 7A2 2 0 0 1 22 16.92z"/></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 13: Medicine Reminder -->
+                  <div id="screen-medicine-reminder" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Medication Agenda</span>
+                      <button class="mobile-header-btn" onclick="addNewMedicineMock()">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      </button>
+                    </div>
+                    
+                    <div style="padding: 16px 20px 80px 20px; display: flex; flex-direction: column; gap: var(--space-sm); overflow-y: auto;" id="medicine-reminder-container">
+                      <div class="home-section-title"><span>Daily Doses</span></div>
+                      
+                      <div class="mobile-card medication-card">
+                        <div class="med-info-left">
+                          <div class="med-icon-box" style="background-color: var(--primary-light); color: var(--primary);">
+                            <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M6 21V3M10 21V3M14 21V3M18 21V3"/></svg>
+                          </div>
+                          <div>
+                            <div class="med-name">Lisinopril 10mg</div>
+                            <div class="med-details">Once Daily • 09:00 AM</div>
+                          </div>
+                        </div>
+                        <button class="med-action-btn taken" id="med-btn-detail-1" onclick="toggleMedTaken('med-btn-detail-1')">Taken ✓</button>
+                      </div>
+
+                      <div class="mobile-card medication-card">
+                        <div class="med-info-left">
+                          <div class="med-icon-box" style="background-color: var(--accent-light); color: var(--primary);">
+                            <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M6 21V3M10 21V3M14 21V3M18 21V3"/></svg>
+                          </div>
+                          <div>
+                            <div class="med-name">Metformin 500mg</div>
+                            <div class="med-details">Twice Daily • With Breakfast</div>
+                          </div>
+                        </div>
+                        <button class="med-action-btn" id="med-btn-detail-2" onclick="toggleMedTaken('med-btn-detail-2')">Mark Taken</button>
+                      </div>
+
+                      <div class="mobile-card medication-card">
+                        <div class="med-info-left">
+                          <div class="med-icon-box" style="background-color: var(--warning-light); color: var(--warning-dark);">
+                            <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M6 21V3M10 21V3M14 21V3M18 21V3"/></svg>
+                          </div>
+                          <div>
+                            <div class="med-name">Atorvastatin 20mg</div>
+                            <div class="med-details">Once Daily • 09:00 PM</div>
+                          </div>
+                        </div>
+                        <button class="med-action-btn" id="med-btn-detail-3" onclick="toggleMedTaken('med-btn-detail-3')">Mark Taken</button>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item active" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 14: Emergency SOS -->
+                  <div id="screen-sos" class="mobile-screen" style="background-color: var(--white);">
+                    <div class="mobile-screen-header" style="border: none;">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title" style="color: var(--danger);">Emergency SOS</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div style="padding: 16px 20px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; flex-grow: 1; overflow-y: auto;">
+                      <div class="sos-outer-pulse" style="margin-top: 10px; margin-bottom: 20px;">
+                        <div class="sos-inner-pulse">
+                          <button class="sos-trigger-btn" id="sos-main-trigger" onclick="triggerSosCountdown()">SOS</button>
+                        </div>
+                      </div>
+                      
+                      <div class="sos-countdown-text" id="sos-countdown-disp">Tap SOS</div>
+                      <p style="text-align: center; font-size: 12px; color: var(--grey-500); max-width: 250px; margin-top: 6px; margin-bottom: 16px;" id="sos-info-text">
+                        Pressing SOS triggers a 3-second countdown to broadcast your medical card and GPS coordinates.
+                      </p>
+
+                      <div class="sos-alert-bar" id="sos-alert-box" style="display: none; width: 100%; margin-bottom: 16px;">
+                        <div class="spinner" style="border-top-color: var(--danger); width:18px; height:18px;"></div>
+                        <span style="font-weight: 600; font-size: 12px;">Alerting Ambulance & Contacts...</span>
+                      </div>
+
+                      <div style="width: 100%; border-radius: var(--radius-lg); background-color: var(--grey-100); padding: 8px; margin-bottom: 20px; border: 1.5px solid var(--grey-200); position: relative; overflow: hidden; height: 100px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <svg width="100%" height="100%" viewBox="0 0 300 100" style="position: absolute; top:0; left:0;">
+                          <defs>
+                            <pattern id="gps-grid-new" width="20" height="20" patternUnits="userSpaceOnUse">
+                              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/>
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill="url(#gps-grid-new)"/>
+                          <path d="M-10,35 L320,35 M50,-10 L50,110 M200,-10 L200,110 M-10,75 L320,75" stroke="var(--grey-200)" stroke-width="5" stroke-linecap="round"/>
+                          <path d="M-10,35 L320,35 M50,-10 L50,110 M200,-10 L200,110" stroke="var(--white)" stroke-width="3" stroke-linecap="round"/>
+                          <circle cx="120" cy="50" r="14" fill="rgba(197,125,113,0.15)" style="animation: logoPulse 1.5s infinite ease-in-out;"/>
+                          <circle cx="120" cy="50" r="5" fill="var(--danger)" stroke="var(--white)" stroke-width="1.5"/>
+                        </svg>
+                        <span style="z-index: 10; font-size: 10px; background-color: rgba(255,255,255,0.95); color: var(--dark); font-weight:600; padding:3px 8px; border-radius:var(--radius-sm); border:1px solid var(--grey-200); box-shadow:var(--shadow-sm);">GPS Tracker Active</span>
+                      </div>
+
+                      <div style="width: 100%; margin-bottom: 20px;">
+                        <div class="home-section-title" style="margin-bottom: 8px;"><span>ER Centers Dispatch</span></div>
+                        <div class="mobile-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; margin-bottom: 6px; font-size: 12px;">
+                          <div>
+                            <div style="font-weight: 600;">St. Jude General Hospital</div>
+                            <div style="font-size: 10px; color: var(--grey-500); margin-top: 1px;">0.8 mi • Emergency Open</div>
+                          </div>
+                          <span class="mobile-badge badge-success" style="font-size: 9px; padding: 2px 6px;">Active</span>
+                        </div>
+                        <div class="mobile-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; font-size: 12px;">
+                          <div>
+                            <div style="font-weight: 600;">Mercy Heart Center</div>
+                            <div style="font-size: 10px; color: var(--grey-500); margin-top: 1px;">1.5 mi • Cardiac ER Open</div>
+                          </div>
+                          <span class="mobile-badge badge-success" style="font-size: 9px; padding: 2px 6px;">Active</span>
+                        </div>
+                      </div>
+
+                      <div style="width: 100%; margin-bottom: 40px;" class="home-section-container">
+                        <div class="home-section-title"><span>Emergency Contacts</span></div>
+                        <div class="mobile-card" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; margin-bottom: 8px;">
+                          <div>
+                            <div style="font-weight: 600; font-size: 13px;">Thomas Jenkins</div>
+                            <div style="font-size: 11px; color: var(--grey-500);">Spouse • +1 (555) 019-8833</div>
+                          </div>
+                          <button class="mobile-badge badge-danger" style="border: none; cursor: pointer;">Call</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 15: Notifications -->
+                  <div id="screen-notifications" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">System Alerts</span>
+                      <button class="mobile-header-btn" onclick="clearNotifications()">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                      </button>
+                    </div>
+                    
+                    <div style="padding: 16px 20px 80px 20px; display: flex; flex-direction: column; gap: var(--space-sm); overflow-y: auto;" id="notifications-list-container">
+                      
+                      <div class="mobile-card" style="padding: 14px; border-left: 4px solid var(--danger); display: flex; gap: 12px;">
+                        <span style="display:flex; align-items:center; color: var(--danger);">
+                          <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </span>
+                        <div>
+                          <div style="font-weight: 600; font-size: 13px;">Systolic Threshold Notice</div>
+                          <div style="font-size: 12px; color: var(--grey-500); margin-top: 2px;">Your heart rate exceeded 105 BPM while sitting resting.</div>
+                          <div style="font-size: 10px; color: var(--grey-400); margin-top: 6px;">15 minutes ago</div>
+                        </div>
+                      </div>
+
+                      <div class="mobile-card" style="padding: 14px; border-left: 4px solid var(--primary); display: flex; gap: 12px;">
+                        <span style="display:flex; align-items:center; color: var(--primary);">
+                          <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </span>
+                        <div>
+                          <div style="font-weight: 600; font-size: 13px;">Consultation Confirmed</div>
+                          <div style="font-size: 12px; color: var(--grey-500); margin-top: 2px;">Consultation booked with Dr. Marcus Vance for Today at 10:30 AM.</div>
+                          <div style="font-size: 10px; color: var(--grey-400); margin-top: 6px;">1 hour ago</div>
+                        </div>
+                      </div>
+
+                      <div class="mobile-card" style="padding: 14px; border-left: 4px solid var(--success); display: flex; gap: 12px;">
+                        <span style="display:flex; align-items:center; color: var(--success);">
+                          <svg class="icon-svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </span>
+                        <div>
+                          <div style="font-weight: 600; font-size: 13px;">Vitals Auto-Synced</div>
+                          <div style="font-size: 12px; color: var(--grey-500); margin-top: 2px;">Vitals synced automatically from Apple HealthKit.</div>
+                          <div style="font-size: 10px; color: var(--grey-400); margin-top: 6px;">08:00 AM</div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item active" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 16: Profile -->
+                  <div id="screen-profile" class="mobile-screen">
+                    <div class="mobile-screen-header" style="background-color: var(--primary-light); border: none;">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Clinical Profile</span>
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-settings')">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                      </button>
+                    </div>
+                    
+                    <div style="overflow-y: auto; padding-bottom: 80px;">
+                      <div class="profile-hero-section">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Sarah Jenkins" class="profile-pic-large">
+                        <h4 class="profile-username">Sarah Jenkins</h4>
+                        <span class="profile-health-id">HealthID: #VN-8844-J9</span>
+                      </div>
+
+                      <div class="insurance-card">
+                        <div class="insurance-title">Medical Insurance</div>
+                        <div class="insurance-provider">Blue Cross Premium Shield</div>
+                        <div class="insurance-number">3984 8921 0029 4482</div>
+                        <div class="insurance-meta">
+                          <span>EXPIRES: 12/28</span>
+                          <span>HMO GROUP</span>
+                        </div>
+                      </div>
+
+                      <div class="profile-menu-section">
+                        <div class="profile-menu-item" onclick="alert('Viewing Medical History: Diagnosed Hypertension 2024, No known drug allergies.')">
+                          <div class="profile-menu-left">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Medical Ledger
+                          </div>
+                          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+
+                        <div class="profile-menu-item" onclick="navigateTo('screen-sos')">
+                          <div class="profile-menu-left">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Emergency Circle
+                          </div>
+                          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+
+                        <div class="profile-menu-item" onclick="navigateTo('screen-settings')">
+                          <div class="profile-menu-left">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            Security & Preferences
+                          </div>
+                          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+
+                        <div class="profile-menu-item" style="border: none;" onclick="navigateTo('screen-login')">
+                          <div class="profile-menu-left" style="color: var(--danger);">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                            Sign Out Account
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Nav -->
+                    <div class="mobile-bottom-nav">
+                      <button class="nav-item" onclick="navigateTo('screen-home')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-doctors')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Doctors</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-reports')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <span>Reports</span>
+                      </button>
+                      <button class="nav-item" onclick="navigateTo('screen-notifications')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span>Alerts</span>
+                      </button>
+                      <button class="nav-item active" onclick="navigateTo('screen-profile')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profile</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 17: Settings -->
+                  <div id="screen-settings" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-profile')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Preferences</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div style="overflow-y: auto; padding-top: 10px;">
+                      
+                      <div class="settings-group">
+                        <span class="settings-group-title">Interface Settings</span>
+                        <div class="switch-container">
+                          <span class="switch-label">Dark Theme Overlay</span>
+                          <label class="switch">
+                            <input type="checkbox" onchange="toggleDarkThemeMock()">
+                            <span class="slider"></span>
+                          </label>
+                        </div>
+                        <div class="switch-container">
+                          <span class="switch-label">Biometric FaceID Login</span>
+                          <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                          </label>
+                        </div>
+                        <div class="switch-container">
+                          <span class="switch-label">System Warning Alerts</span>
+                          <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="settings-group">
+                        <span class="settings-group-title">System</span>
+                        <div class="profile-menu-item" style="padding: 12px 20px; border-top: 1px solid var(--grey-200);" onclick="alert('Language selection: English (US)')">
+                          <div class="profile-menu-left">Language Settings</div>
+                          <span style="font-size: 13px; color: var(--grey-500);">English (US)</span>
+                        </div>
+                        <div class="profile-menu-item" style="padding: 12px 20px;" onclick="alert('Viewing terms of use, privacy policy, and HIPAA disclosure agreement.')">
+                          <div class="profile-menu-left">Privacy Policy</div>
+                          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                        <div class="profile-menu-item" style="padding: 12px 20px;" onclick="alert('VitaNova Client Version v1.0.0-production. Hosted in secure HIPAA-compliant cloud.')">
+                          <div class="profile-menu-left">About System</div>
+                          <span style="font-size: 12px; color: var(--grey-400);">v1.0.0</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Screen 18: Payment -->
+                  <div id="screen-payment" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-booking')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title">Secure Checkout</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    
+                    <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; flex-grow: 1;">
+                      <div class="mobile-card" style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: var(--white); padding: 18px; position: relative;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                          <span style="font-size: 11px; font-weight: 600; letter-spacing: 1px;">CREDIT CARD</span>
+                          <span style="font-style: italic; font-weight: 800; font-size: 16px;">VISA</span>
+                        </div>
+                        <div style="font-family: monospace; font-size: 16px; margin-top: 24px; letter-spacing: 2px;">•••• •••• •••• 4482</div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 20px;">
+                          <div>
+                            <div style="font-size: 9px; opacity: 0.7; text-transform: uppercase;">Holder</div>
+                            <div style="font-size: 13px; font-weight: 600; margin-top: 2px;">Sarah Jenkins</div>
+                          </div>
+                          <div>
+                            <div style="font-size: 9px; opacity: 0.7; text-transform: uppercase;">Expiry</div>
+                            <div style="font-size: 13px; font-weight: 600; margin-top: 2px;">08/29</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mobile-input-group">
+                        <label class="mobile-input-label">CVV Code</label>
+                        <input type="password" class="mobile-input" style="padding-left: 16px;" placeholder="123" value="123">
+                      </div>
+
+                      <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label class="mobile-card" style="display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 12px;">
+                          <input type="radio" name="payment-method" checked style="accent-color: var(--primary);">
+                          <span style="font-size: 13px; font-weight: 600;">Saved Visa Card ending 4482</span>
+                        </label>
+                        <label class="mobile-card" style="display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 12px;">
+                          <input type="radio" name="payment-method" style="accent-color: var(--primary);">
+                          <span style="font-size: 13px; font-weight: 600;">Google Pay / Apple Pay</span>
+                        </label>
+                      </div>
+
+                      <div style="margin-top: auto; padding-top: 20px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 16px; font-size: 14px;">
+                          <span style="color: var(--grey-500); font-weight: 500;">Consultation Fee</span>
+                          <span style="font-weight: 700; color: var(--dark);">$120.00</span>
+                        </div>
+                        <button class="mobile-btn mobile-btn-primary" onclick="processPaymentMock()">Verify & Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 19: Success Screen -->
+                  <div id="screen-success" class="mobile-screen" style="justify-content: center; align-items: center; padding: 32px; text-align: center;">
+                    <div style="width: 80px; height: 80px; border-radius: var(--radius-full); background-color: var(--success-light); display: flex; align-items: center; justify-content: center; color: var(--success); margin-bottom: 24px; box-shadow: 0 8px 24px rgba(110, 140, 115, 0.15);">
+                      <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    
+                    <h3 style="font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--dark); margin-bottom: 8px;">Session Scheduled</h3>
+                    <p style="font-size: 13px; color: var(--grey-500); line-height: 1.5; margin-bottom: 40px; max-width: 250px;">
+                      Your medical consultation has been successfully verified and added to your schedule.
+                    </p>
+
+                    <button class="mobile-btn mobile-btn-primary" onclick="navigateTo('screen-home')" style="max-width: 200px;">Return Home</button>
+                  </div>
+
+                  <!-- Screen 20: Empty States -->
+                  <div id="screen-empty" class="mobile-screen">
+                    <div class="mobile-screen-header">
+                      <button class="mobile-header-btn" onclick="navigateTo('screen-home')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      </button>
+                      <span class="mobile-screen-title" id="empty-screen-header-title">Reports Locker</span>
+                      <div style="width: 36px;"></div>
+                    </div>
+                    <div class="empty-state-view">
+                      <div class="state-illustration" id="empty-screen-illustration">
+                        <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="70" cy="70" r="50" fill="var(--primary-light)"/>
+                          <path d="M55 50h30v40H55z" fill="var(--accent)"/>
+                          <path d="M60 60h20M60 70h12" stroke="var(--grey-400)" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                      </div>
+                      <h4 class="state-title" id="empty-screen-title">No Medical Reports</h4>
+                      <p class="state-description" id="empty-screen-desc">There are currently no lab test reports uploaded to your secure cloud locker. Ask your practitioner to sync them.</p>
+                      <button class="mobile-btn mobile-btn-outline" style="max-width: 180px; margin: 0 auto;" id="empty-screen-btn" onclick="navigateTo('screen-home')">Return Home</button>
+                    </div>
+                  </div>
+
+                  <!-- Screen 21: Error State -->
+                  <div id="screen-error" class="mobile-screen">
+                    <div class="error-state-view">
+                      <div class="state-illustration">
+                        <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="70" cy="70" r="50" fill="#FDF4F2"/>
+                          <path d="M70 45v35" stroke="#C57D71" stroke-width="6" stroke-linecap="round"/>
+                          <circle cx="70" cy="95" r="4.5" fill="#C57D71"/>
+                        </svg>
+                      </div>
+                      <h4 class="state-title">Sync Error</h4>
+                      <p class="state-description">We couldn't establish connection with the VitaNova health cloud. Please check network logs and try again.</p>
+                      <button class="mobile-btn mobile-btn-primary" style="max-width: 180px; margin: 0 auto;" onclick="navigateTo('screen-home')">Retry Sync</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controller and Note Column -->
+          <div class="prototype-controls-column">
+            <div class="side-card">
+              <h3 class="panel-title">Prototype Controller</h3>
+              
+              <div class="screen-jump-list">
+                <button class="screen-jump-btn active" id="btn-screen-splash" onclick="navigateTo('screen-splash')">
+                  <span>1. Splash Screen</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-onboarding-1" onclick="navigateTo('screen-onboarding-1')">
+                  <span>2. Onboarding 1 (Vitals)</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-onboarding-2" onclick="navigateTo('screen-onboarding-2')">
+                  <span>3. Onboarding 2 (Consult)</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-onboarding-3" onclick="navigateTo('screen-onboarding-3')">
+                  <span>4. Onboarding 3 (SOS)</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-login" onclick="navigateTo('screen-login')">
+                  <span>5. Access Gateway</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-signup" onclick="navigateTo('screen-signup')">
+                  <span>6. Register Page</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-home" onclick="navigateTo('screen-home')">
+                  <span>7. Home Dashboard</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-health-details" onclick="navigateTo('screen-health-details')">
+                  <span>8. Analytics Trend Charts</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-reports" onclick="navigateTo('screen-reports')">
+                  <span>9. Reports Locker</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-doctors" onclick="navigateTo('screen-doctors')">
+                  <span>10. Doctors Directory</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-booking" onclick="navigateTo('screen-booking')">
+                  <span>11. Slot Scheduler</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-video-call" onclick="navigateTo('screen-video-call')">
+                  <span>12. Video Consultation</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-medicine-reminder" onclick="navigateTo('screen-medicine-reminder')">
+                  <span>13. Med Schedule</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-sos" onclick="navigateTo('screen-sos')">
+                  <span>14. Emergency SOS</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-notifications" onclick="navigateTo('screen-notifications')">
+                  <span>15. Alerts Inbox</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-profile" onclick="navigateTo('screen-profile')">
+                  <span>16. Profile Ledger</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-settings" onclick="navigateTo('screen-settings')">
+                  <span>17. Settings Config</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-payment" onclick="navigateTo('screen-payment')">
+                  <span>18. Credit Payment</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button class="screen-jump-btn" id="btn-screen-success" onclick="navigateTo('screen-success')">
+                  <span>19. Success Screen</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <div class="state-toggle-section">
+                <span class="note-section-title">Contextual Screen States</span>
+                <div class="state-toggle-grid">
+                  <button class="state-toggle-btn active" id="btn-state-default" onclick="toggleScreenState('default')">Default State</button>
+                  <button class="state-toggle-btn" id="btn-state-empty" onclick="toggleScreenState('empty', 'reports')">Empty Reports</button>
+                  <button class="state-toggle-btn" id="btn-state-empty-notif" onclick="toggleScreenState('empty', 'notifications')">Empty Alerts</button>
+                  <button class="state-toggle-btn" id="btn-state-empty-appt" onclick="toggleScreenState('empty', 'appointments')">Empty Appts</button>
+                  <button class="state-toggle-btn" id="btn-state-error" onclick="toggleScreenState('error')" style="grid-column: span 2;">Error State</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Designer Notes Panel -->
+          <div class="designer-notes-column">
+            <div class="side-card designer-notes-card">
+              <span class="note-section-title">Senior Product Designer Notes</span>
+              <h4 class="note-screen-name" id="note-title">Splash Screen</h4>
+              <p class="note-content" id="note-body">
+                The entry point features a clean, high-contrast healthcare identity. The pulse/heartbeat logo vector creates instant context, accompanied by a soft, premium background gradient. Built with Apple human-interface principles, displaying high accessibility color combinations.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: DESIGN SYSTEM & COMPONENT LIBRARY -->
+      <div id="design-system-tab" class="tab-panel">
+        <div class="design-system-grid">
+          
+          <!-- Section 1: Colors -->
+          <div class="design-system-section">
+            <h3 class="ds-section-title">Scandinavian Calm Palette</h3>
+            <div class="colors-grid">
+              
+              <div class="color-swatch-card">
+                <div class="swatch-display" style="background-color: var(--primary);"></div>
+                <div class="swatch-details">
+                  <span class="swatch-name">Forest Charcoal</span>
+                  <div class="swatch-hex">#2C332B</div>
+                </div>
+              </div>
+
+              <div class="color-swatch-card">
+                <div class="swatch-display" style="background-color: var(--brand-terracotta);"></div>
+                <div class="swatch-details">
+                  <span class="swatch-name">Brand Terracotta</span>
+                  <div class="swatch-hex">#A36F55</div>
+                </div>
+              </div>
+
+              <div class="color-swatch-card">
+                <div class="swatch-display" style="background-color: var(--success);"></div>
+                <div class="swatch-details">
+                  <span class="swatch-name">Leaf Green</span>
+                  <div class="swatch-hex">#6E8C73</div>
+                </div>
+              </div>
+
+              <div class="color-swatch-card">
+                <div class="swatch-display" style="background-color: var(--warning);"></div>
+                <div class="swatch-details">
+                  <span class="swatch-name">Sand Ochre</span>
+                  <div class="swatch-hex">#D4A373</div>
+                </div>
+              </div>
+
+              <div class="color-swatch-card">
+                <div class="swatch-display" style="background-color: var(--danger);"></div>
+                <div class="swatch-details">
+                  <span class="swatch-name">Blush Rose</span>
+                  <div class="swatch-hex">#C57D71</div>
+                </div>
+              </div>
+
+              <div class="color-swatch-card">
+                <div class="swatch-display" style="background-color: var(--dark);"></div>
+                <div class="swatch-details">
+                  <span class="swatch-name">Charcoal Text</span>
+                  <div class="swatch-hex">#222521</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 2: Typography -->
+          <div class="design-system-section">
+            <h3 class="ds-section-title">Typography Scale</h3>
+            <table class="typography-table">
+              <thead>
+                <tr>
+                  <th>Level Name</th>
+                  <th>Font Details</th>
+                  <th>Size / Weight</th>
+                  <th>Interactive Preview</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Display Heading 1</td>
+                  <td>Outfit, Sans-serif</td>
+                  <td>42px / Extra-Bold (800)</td>
+                  <td style="font-family: var(--font-heading); font-size: 32px; font-weight: 800; color: var(--dark);">Case Study Title</td>
+                </tr>
+                <tr>
+                  <td>Screen Header</td>
+                  <td>Outfit, Sans-serif</td>
+                  <td>19px / Bold (700)</td>
+                  <td style="font-family: var(--font-heading); font-size: 19px; font-weight: 700; color: var(--dark);">Clinical Profile</td>
+                </tr>
+                <tr>
+                  <td>Card Title</td>
+                  <td>Inter, Sans-serif</td>
+                  <td>13px / Semi-Bold (600)</td>
+                  <td style="font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-light);">Complete Blood Count</td>
+                </tr>
+                <tr>
+                  <td>Body Content</td>
+                  <td>Inter, Sans-serif</td>
+                  <td>14px / Regular (400)</td>
+                  <td style="font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--grey-600);">Monitor your blood pressure daily.</td>
+                </tr>
+                <tr>
+                  <td>Small Subtext</td>
+                  <td>Inter, Sans-serif</td>
+                  <td>11px / Semi-Bold (600)</td>
+                  <td style="font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--grey-500); text-transform: uppercase; letter-spacing: 0.5px;">BLOOD PRESSURE</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Section 3: Interactive Reusable Components -->
+          <div class="design-system-section">
+            <h3 class="ds-section-title">Components Catalog</h3>
+            <div class="components-showcase-grid">
+              
+              <!-- Buttons -->
+              <div class="component-demo-box">
+                <span class="demo-box-title">Buttons</span>
+                <div style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                  <button class="mobile-btn mobile-btn-primary">Primary Solid Button</button>
+                  <button class="mobile-btn mobile-btn-accent">Secondary Accent Button</button>
+                  <button class="mobile-btn mobile-btn-secondary">Soft Highlight Button</button>
+                  <button class="mobile-btn mobile-btn-outline">Outline Sand Button</button>
+                </div>
+              </div>
+
+              <!-- Inputs & Search Bar -->
+              <div class="component-demo-box">
+                <span class="demo-box-title">Forms & Searches</span>
+                <div style="width: 100%; display: flex; flex-direction: column; gap: 12px;">
+                  <div class="mobile-input-group" style="margin-bottom: 0;">
+                    <label class="mobile-input-label">Form Input with Icon</label>
+                    <div class="mobile-input-wrapper">
+                      <span class="mobile-input-icon">
+                        <svg class="icon-svg svg-btn-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                      </span>
+                      <input type="text" class="mobile-input" style="padding-left: 36px;" placeholder="Username">
+                    </div>
+                  </div>
+                  
+                  <div class="mobile-input-group" style="margin-bottom: 0;">
+                    <label class="mobile-input-label">Search Bar Component</label>
+                    <div class="mobile-input-wrapper">
+                      <span class="mobile-input-icon">
+                        <svg class="icon-svg svg-btn-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                      </span>
+                      <input type="text" class="mobile-input" style="padding-left: 36px; padding-top: 10px; padding-bottom: 10px;" placeholder="Search medical database...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Checkbox, Radio, and Switch -->
+              <div class="component-demo-box">
+                <span class="demo-box-title">Selectors</span>
+                <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                  <div style="display: flex; gap: 16px; align-items: center;">
+                    <label style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                      <input type="checkbox" checked style="accent-color: var(--primary);"> Checkbox Checked
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                      <input type="checkbox" style="accent-color: var(--primary);"> Unchecked
+                    </label>
+                  </div>
+                  
+                  <div style="display: flex; gap: 16px; align-items: center;">
+                    <label style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                      <input type="radio" name="demo-radio" checked style="accent-color: var(--primary);"> Radio Active
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                      <input type="radio" name="demo-radio" style="accent-color: var(--primary);"> Inactive
+                    </label>
+                  </div>
+
+                  <div style="display: flex; justify-content: space-between; align-items: center; background-color: var(--white); padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--grey-200);">
+                    <span style="font-size: 13px; font-weight: 500;">Toggle Switch Switch</span>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dropdown and Progress Bar -->
+              <div class="component-demo-box">
+                <span class="demo-box-title">Dropdowns & Progress Bars</span>
+                <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                  <div class="mobile-input-group" style="margin-bottom: 0;">
+                    <label class="mobile-input-label">Select Option Dropdown</label>
+                    <select style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--grey-200); font-family: var(--font-body); font-size: 13px; outline: none; background-color: var(--white);">
+                      <option>Weekly View Schedule</option>
+                      <option>Monthly View Schedule</option>
+                      <option>Yearly View Schedule</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="mobile-input-label" style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                      <span>Vitals Sync Progress</span>
+                      <span>85%</span>
+                    </label>
+                    <div style="width: 100%; height: 8px; background-color: var(--grey-200); border-radius: var(--radius-full); overflow: hidden;">
+                      <div style="width: 85%; height: 100%; background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%); border-radius: var(--radius-full);"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 3: HUMAN-DESIGNED UX CASE STUDY -->
+      <div id="case-study-tab" class="tab-panel">
+        <article class="case-study-container">
+          
+          <header class="cs-header">
+            <span class="cs-title-badge">Product Design Case Study</span>
+            <h1 class="cs-main-title">Designing VitaNova</h1>
+            <p class="cs-subtitle">Humanizing remote health tracking through minimalist Scandinavian design, tactile interactions, and intuitive telemetry alerts.</p>
+          </header>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">1. Introduction & Context</h3>
+            <p class="cs-text">
+              In early 2026, I audited the remote patient monitoring landscape. I observed a common, stressful visual pattern: cold, clinical blue interfaces filled with complex medical charts that increase patient anxiety instead of reducing it. 
+            </p>
+            <p class="cs-text">
+              With <strong>VitaNova</strong>, my goal was to completely rebuild the experience. I designed a premium mobile platform inspired by Scandinavian minimalism. By using warm earth tones, tactile cards, and clear typography, I transformed physiological data tracking into a calm, supportive habit.
+            </p>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">2. The Design Challenge</h3>
+            <p class="cs-text">
+              Patients managing cardiovascular conditions need to review their daily vitals without feeling overwhelmed by numbers. How do we present high-risk physiological data in a way that remains clinical but feels natural and relaxing?
+            </p>
+            
+            <div class="cs-two-col">
+              <div class="cs-info-box">
+                <h4 class="cs-info-title">The Friction Points</h4>
+                <ul class="cs-list">
+                  <li class="cs-list-item"><strong>Grid Overload:</strong> Symmetrical 2x2 cards look generic and require equal attention, making it hard to prioritize metrics.</li>
+                  <li class="cs-list-item"><strong>Critical Alerts:</strong> Warning sirens trigger fear, when what patients actually need is immediate, clear direction.</li>
+                </ul>
+              </div>
+              
+              <div class="cs-info-box cs-info-box-danger">
+                <h4 class="cs-info-title">The Design Decisions</h4>
+                <ul class="cs-list">
+                  <li class="cs-list-item"><strong>Asymmetry:</strong> Spanned blood pressure (the primary chronic concern) across the full width with a custom sparkline to highlight its importance.</li>
+                  <li class="cs-list-item"><strong>Scandinavian Calm:</strong> Replaced clinical blues with terracotta, warm nude, and sage grey tones to create a high-trust, luxury health environment.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">3. Patient Persona</h3>
+            <div class="persona-card">
+              <div class="persona-header">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Sarah Persona" class="persona-avatar">
+                <div class="persona-meta">
+                  <span class="persona-name">Sarah Jenkins (Age 45)</span>
+                  <span class="persona-quote">"I want to track my heart condition without feeling like a patient on hospital monitors all day."</span>
+                </div>
+              </div>
+              <p class="cs-text">
+                Sarah is a marketing consultant managing moderate hypertension. She needs a simple, comforting way to log readings and coordinate with her cardiologist, Dr. Marcus Vance, without adding cognitive stress to her day.
+              </p>
+            </div>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">4. User Journey Mapping</h3>
+            <p class="cs-text">
+              I mapped Sarah Jenkins' end-to-end journey to identify design opportunities and alleviate pain points:
+            </p>
+            <table class="typography-table" style="font-size: 13px; line-height: 1.5;">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Stage</th>
+                  <th style="width: 40%;">User Action / Thinking</th>
+                  <th style="width: 40%;">UX Design Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. Discovery</strong></td>
+                  <td>Diagnosed with hypertension. Downloads VitaNova. Wants rapid login without typing.</td>
+                  <td>Biometric FaceID setup bypasses typing. Synchronizes Apple HealthKit automatically.</td>
+                </tr>
+                <tr>
+                  <td><strong>2. Tracking</strong></td>
+                  <td>Opens dashboard. Evaluates blood pressure. Wondering if 118/78 is good.</td>
+                  <td>Color-coded vitals cards. Large typography with green "Optimal" status tag.</td>
+                </tr>
+                <tr>
+                  <td><strong>3. Med Adherence</strong></td>
+                  <td>Needs to take Lisinopril 10mg. Wants a clean way to check it off.</td>
+                  <td>Home Dashboard medication reminders widget. Single-tap "Mark Taken" changes to green.</td>
+                </tr>
+                <tr>
+                  <td><strong>4. Alert Spike</strong></td>
+                  <td>Resting heart rate spikes. Panics. Needs emergency dispatch instantly.</td>
+                  <td>SOS trigger on home header. 3-second breathing countdown to cancel accidental clicks.</td>
+                </tr>
+                <tr>
+                  <td><strong>5. Consultation</strong></td>
+                  <td>Spike settles. Wants to book slot and video call Dr. Marcus Vance immediately.</td>
+                  <td>Telehealth directory booking calendar + slots select. HD Video Call page with controls.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">5. Wireframes & Space Planning</h3>
+            <p class="cs-text">
+              During the layout planning phase, I intentionally broke away from template structures:
+            </p>
+            <ul class="cs-list">
+              <li class="cs-list-item"><strong>Asymmetry:</strong> The dashboard layout highlights Blood Pressure as the most important metric, while grouping Heart Rate and Oxygen underneath.</li>
+              <li class="cs-list-item"><strong>Touch Targets:</strong> Buttons and clickable tiles have a minimum active target area of 44x44px, ensuring accessibility during moments of stress.</li>
+              <li class="cs-list-item"><strong>Calm Breathing:</strong> The SOS button uses a soft breathing animation to encourage slower breathing when patients are panicking.</li>
+            </ul>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">6. Brand & Color Choices</h3>
+            <p class="cs-text">
+              I selected the colors to resemble natural, earthy textures:
+            </p>
+            <div class="cs-two-col">
+              <div class="cs-info-box">
+                <h4 class="cs-info-title">Earthy Materials</h4>
+                <p style="font-size: 13px; color: var(--grey-600);">
+                  Warm Terracotta (#A36F55) anchors the brand's primary identity, evoking warmth and vitality. Sage Grey (#556052) provides an organic, neutral background that balances the layout.
+                </p>
+              </div>
+              <div class="cs-info-box">
+                <h4 class="cs-info-title">Contrast Accessibility</h4>
+                <p style="font-size: 13px; color: var(--grey-600);">
+                  Deep Charcoal Brown (#2B2A27) is used for all text on warm sand backgrounds, maintaining high visual contrast and meeting WCAG AAA requirements.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">7. Design Hypotheses & Validation Plan</h3>
+            <p class="cs-text">
+              As a solo designer project, VitaNova has not yet undergone formal clinical trials or large-scale patient usability tests. Instead, the design system and interactions are built around clear, testable design hypotheses. The next phase of this project involves conducting a moderated usability study with a small target user cohort to evaluate these theories:
+            </p>
+            <ul class="cs-list">
+              <li class="cs-list-item"><strong>Hypothesis 1 (Cognitive Load):</strong> We expect the asymmetrical dashboard layout to reduce the time-to-glance required for users to identify their blood pressure status, by visually separating high-priority telemetry from secondary vitals.</li>
+              <li class="cs-list-item"><strong>Hypothesis 2 (Medication Adherence):</strong> We expect that placing a persistent, single-tap medication agenda on the home dashboard will increase dose compliance, turning daily logging into a low-friction routine.</li>
+              <li class="cs-list-item"><strong>Hypothesis 3 (Emotional Calm):</strong> We expect that utilizing an earthy Scandinavian palette instead of standard clinical high-contrast blue will lead to lower patient anxiety levels during health spikes, promoting emotional calm.</li>
+            </ul>
+          </section>
+
+          <section class="cs-section">
+            <h3 class="cs-section-heading">8. Lessons Learned & Next Steps</h3>
+            <p class="cs-text">
+              Developing VitaNova taught me that medical design does not have to look clinical to be effective. By using minimalist, natural palettes and focused layouts, we can lower patient anxiety and create a more comfortable health tracking experience.
+            </p>
+          </section>
+
+        </article>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
