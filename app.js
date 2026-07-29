@@ -1,9 +1,9 @@
-// VitaNova Health Monitoring App - Interactive Prototype Logic
+// MG Health Monitoring App - Interactive Prototype Logic
 
 // Screen Metadata & UX Designer Notes (Human-Designed Reflections)
 const screenNotes = {
   'screen-splash': {
-    title: 'VitaNova Splash Experience',
+    title: 'MG Health Splash Experience',
     body: 'Designed as a warm welcome. The heartbeat line is clean, and the terracotta-to-sage gradient introduces a calming, organic visual identity immediately.'
   },
   'screen-onboarding-1': {
@@ -98,7 +98,7 @@ let sosActive = false;
 let currentChartTimeframe = 'weekly';
 let currentVitalType = 'bp'; // bp, hr, oxygen, temp, weight, bmi
 
-// Dynamic island states (VitaNova Theme)
+// Dynamic island states (MG Health Theme)
 const islandStates = {
   default: { width: '110px', height: '30px', content: '' },
   call: { width: '180px', height: '30px', content: '<span style="font-size:11px;color:var(--success);font-weight:600;display:flex;align-items:center;gap:4px;">● Active Call</span>' },
@@ -428,7 +428,7 @@ function renderVitalsChart(timeframe) {
   const pathD1 = getPathD(coords1);
   const pathD2 = coords2 ? getPathD(coords2) : '';
 
-  // Gradient definitions based on Vital Color (VitaNova Scandinavian Palette)
+  // Gradient definitions based on Vital Color (MG Health Scandinavian Palette)
   // BP uses Terracotta highlight, others use clean forest/sage/dark elements
   let strokeColor1 = 'var(--brand-terracotta)';
   let strokeColor2 = 'var(--accent)';
@@ -597,7 +597,7 @@ function triggerSosCountdown() {
       homeSosAlert.style.cssText = 'background-color: var(--danger-light); color: var(--danger); font-size:12px; font-weight:700; padding:10px 20px; border-bottom:1px solid rgba(197,125,113,0.2); display:flex; align-items:center; gap:8px;';
       homeSosAlert.innerHTML = `
         <span style="animation: logoPulse 1s infinite ease-in-out;">🔴</span>
-        <span>VitaNova Alert: Ambulance dispatched. Contact spouse immediately.</span>
+        <span>MG Health Alert: Ambulance dispatched. Contact spouse immediately.</span>
       `;
       const homeScreen = document.getElementById('screen-home');
       if (homeScreen && !document.getElementById('home-sos-warning-header')) {
@@ -766,7 +766,7 @@ function simulatePdfAction(action, filename) {
   if (action === 'download') {
     alert(`Downloaded PDF successfully! Saved "${filename}" file to local device storage.`);
   } else {
-    alert(`Generated sharing link: "vitanova-telehealth.secure.link/share/${Math.random().toString(36).substring(7)}" successfully copied to clipboard.`);
+    alert(`Generated sharing link: "mg-health-telehealth.secure.link/share/${Math.random().toString(36).substring(7)}" successfully copied to clipboard.`);
   }
 }
 
